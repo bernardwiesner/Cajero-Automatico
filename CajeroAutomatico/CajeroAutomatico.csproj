@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A1B26019-920E-41B2-BB12-B302E33601EA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CajeroAutomatico</RootNamespace>
+    <AssemblyName>CajeroAutomatico</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\android-hw\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>486BD630F5DC30DF1B4E4860D8A19AE2BE3486AD</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>CajeroAutomatico_ClaveTemporal.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config.Designer.cs">
+      <DependentUpon>Config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Datos.cs" />
+    <Compile Include="eng\Balance_eng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eng\Balance_eng.Designer.cs">
+      <DependentUpon>Balance_eng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="eng\FaltanFondos_eng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eng\FaltanFondos_eng.Designer.cs">
+      <DependentUpon>FaltanFondos_eng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="eng\Login_eng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eng\Login_eng.Designer.cs">
+      <DependentUpon>Login_eng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="eng\MainFrame_eng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eng\MainFrame_eng.Designer.cs">
+      <DependentUpon>MainFrame_eng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="eng\PinIncorrecto_eng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eng\PinIncorrecto_eng.Designer.cs">
+      <DependentUpon>PinIncorrecto_eng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="eng\Recibo_retiro_eng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eng\Recibo_retiro_eng.Designer.cs">
+      <DependentUpon>Recibo_retiro_eng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="eng\RetiroEfectivo_eng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eng\RetiroEfectivo_eng.Designer.cs">
+      <DependentUpon>RetiroEfectivo_eng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="eng\TomeDinero_eng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eng\TomeDinero_eng.Designer.cs">
+      <DependentUpon>TomeDinero_eng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="esp\Balance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="esp\Balance.Designer.cs">
+      <DependentUpon>Balance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="esp\FaltanFondos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="esp\FaltanFondos.Designer.cs">
+      <DependentUpon>FaltanFondos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="esp\PinIncorrecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="esp\PinIncorrecto.Designer.cs">
+      <DependentUpon>PinIncorrecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="esp\Recibo_balance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="esp\Recibo_balance.Designer.cs">
+      <DependentUpon>Recibo_balance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="esp\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="esp\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="esp\MainFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="esp\MainFrame.Designer.cs">
+      <DependentUpon>MainFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="eng\Recibo_balance_eng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eng\Recibo_balance_eng.Designer.cs">
+      <DependentUpon>Recibo_balance_eng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="esp\Recibo_retiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="esp\Recibo_retiro.Designer.cs">
+      <DependentUpon>Recibo_retiro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="esp\TomeDinero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="esp\TomeDinero.Designer.cs">
+      <DependentUpon>TomeDinero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NumberPad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NumberPad.Designer.cs">
+      <DependentUpon>NumberPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="esp\RetiroEfectivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="esp\RetiroEfectivo.Designer.cs">
+      <DependentUpon>RetiroEfectivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectLanguage.Designer.cs">
+      <DependentUpon>SelectLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Config.resx">
+      <DependentUpon>Config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eng\Balance_eng.resx">
+      <DependentUpon>Balance_eng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eng\FaltanFondos_eng.resx">
+      <DependentUpon>FaltanFondos_eng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eng\Login_eng.resx">
+      <DependentUpon>Login_eng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eng\MainFrame_eng.resx">
+      <DependentUpon>MainFrame_eng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eng\PinIncorrecto_eng.resx">
+      <DependentUpon>PinIncorrecto_eng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eng\Recibo_retiro_eng.resx">
+      <DependentUpon>Recibo_retiro_eng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eng\RetiroEfectivo_eng.resx">
+      <DependentUpon>RetiroEfectivo_eng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eng\TomeDinero_eng.resx">
+      <DependentUpon>TomeDinero_eng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="esp\Balance.resx">
+      <DependentUpon>Balance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="esp\FaltanFondos.resx">
+      <DependentUpon>FaltanFondos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="esp\PinIncorrecto.resx">
+      <DependentUpon>PinIncorrecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="esp\Recibo_balance.resx">
+      <DependentUpon>Recibo_balance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="esp\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="esp\MainFrame.resx">
+      <DependentUpon>MainFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eng\Recibo_balance_eng.resx">
+      <DependentUpon>Recibo_balance_eng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="esp\Recibo_retiro.resx">
+      <DependentUpon>Recibo_retiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="esp\TomeDinero.resx">
+      <DependentUpon>TomeDinero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumberPad.resx">
+      <DependentUpon>NumberPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="esp\RetiroEfectivo.resx">
+      <DependentUpon>RetiroEfectivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectLanguage.resx">
+      <DependentUpon>SelectLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="CajeroAutomatico_ClaveTemporal.pfx" />
+    <None Include="Datos.json" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\enter_pin3.png" />
+    <None Include="Resources\atm_reinsert_illustrations.gif" />
+    <None Include="Resources\atm_reinsert_illustration1.gif" />
+    <None Include="Resources\atm_reinsert_illustration.gif" />
+    <None Include="Resources\JHP_Icon_110314_ATM.gif" />
+    <None Include="Resources\Banco-Delta-retire-esp.jpg" />
+    <None Include="Resources\numpad2.jpg" />
+    <None Include="Resources\numpad.png" />
+    <None Include="Resources\672c6a16b85154919bf8bec420ed3ceb_clip-art-of-an-atm-number-pad-pin-number-clipart_639-488.png" />
+    <None Include="Resources\Banco-Delta-login-eng.jpg" />
+    <None Include="Resources\Banco-Delta-login-esp.jpg" />
+    <None Include="Resources\Banco-Delta-receipt-esp.jpg" />
+    <None Include="Resources\Banco-Delta-receipt-eng.jpg" />
+    <None Include="Resources\Banco-Delta-home-eng.jpg" />
+    <None Include="Resources\Banco-Delta-home.jpg" />
+    <None Include="Resources\Banco-Delta-language.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
